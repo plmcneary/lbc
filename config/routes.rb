@@ -5,8 +5,8 @@ Rails.application.routes.draw do
   get 'about' => 'static_pages#about'
   get 'contact' => 'static_pages#contact'
   get 'privacy' => 'static_pages#privacy'
-  get 'help' => 'static_pages#help'
   get 'faq' => 'static_pages#faq'
+  get 'help' => 'static_pages#help'
   get 'copyright' => 'static_pages#copyright'
   get 'terms' => 'static_pages#terms'
 
