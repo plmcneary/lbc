@@ -3,7 +3,7 @@ require 'test_helper'
 class UserTest < ActiveSupport::TestCase
 
   def setup
-    @user = User.new(first_name: "Example", last_name: "User", email: "user@example.com", organization: "Lush Bull City", address_line_1: "101 City Hall Plaza", city: "Durham", state: "NC", zip_code: 27701)
+    @user = User.new(first_name: "Example", last_name: "User", email: "user@example.com", organization: "Lush Bull City", address_line_1: "101 City Hall Plaza", city: "Durham", zip_code: 27701, password: "foobar", password_confirmation: "foobar")
   end
 
   test "should be valid" do
@@ -143,5 +143,17 @@ class UserTest < ActiveSupport::TestCase
       @user.zip_code = invalid_zip_code
       assert_not @user.valid?, "#{invalid_zip_code.inspect} should be invalid"
     end
+  end
+
+# Password
+
+  test "password should be present (nonblank)" do
+    @user.password = @user.password_confirmation = " " * 6
+    assert_not @user.valid?
+  end
+
+  test "password should have a minimum length" do
+    @user.password = @user.password_confirmation = "a" * 5
+    assert_not @user.valid?
   end
 end

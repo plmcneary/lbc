@@ -17,4 +17,9 @@ class User < ActiveRecord::Base
   validates :city, presence: true, format: { with: VALID_CITIES_REGEX }
   VALID_ZIP_CODE_REGEX = /\A(?:(27278)|(27510)|(27514)|(27516)|(27517)|(27599)|(27701)|(27703)|(27704)|(27705)|(27706)|(27707)|(27708)|(27709)|(27710)|(27711)|(27712)|(27713))\z/
   validates :zip_code, presence: true, format: { with: VALID_ZIP_CODE_REGEX }
+
+# Secure Password
+
+  has_secure_password
+  validates :password, presence: true, length: { minimum: 6 }
 end
