@@ -21,7 +21,6 @@ ActiveRecord::Schema.define(version: 20160302200554) do
     t.string   "address_line_1"
     t.string   "address_line_2"
     t.string   "city"
-    t.string   "state"
     t.integer  "zip_code"
     t.string   "password_digest"
     t.datetime "created_at",      null: false
