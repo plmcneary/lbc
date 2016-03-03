@@ -14,7 +14,7 @@ class SiteLayoutTest < ActionDispatch::IntegrationTest
     assert_select "a[href=?]", copyright_path
     assert_select "a[href=?]", terms_path
     get signup_path
-    assert_select "title", full_title("Sign up")
+    assert_select "title", full_title("Sign Up")
   end
 
 end
