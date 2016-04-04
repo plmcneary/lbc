@@ -1,1 +1,9 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+peter:
+  first_name: Peter
+  last_name: McNeary
+  email: michael@example.com
+  organization: Turkey Farm Nursery
+  address_line_1: 101 Stoneridge Drive
+  city: Chapel Hill
+  zip_code: 27514
+  password_digest: <%= User.digest('password') %>

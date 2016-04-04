@@ -10,6 +10,7 @@ class CreateUsers < ActiveRecord::Migration
       t.string :city
       t.integer :zip_code
       t.string :password_digest
+      t.string :remember_digest
 
       t.timestamps null: false
     end

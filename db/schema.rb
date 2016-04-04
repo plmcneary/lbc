@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 20160302200554) do
     t.string   "city"
     t.integer  "zip_code"
     t.string   "password_digest"
+    t.string   "remember_digest"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
   end
