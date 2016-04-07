@@ -7,6 +7,7 @@ peter:
   city: Chapel Hill
   zip_code: 27514
   password_digest: <%= User.digest('password') %>
+  admin: true
 
 megan:
   first_name: Megan
@@ -25,7 +26,7 @@ user_<%= n %>:
   email: <%= "user-#{n}@example.com" %>
   organization: <%= "User #{n} organization" %>
   address_line_1: <%= "#{n} Example Road" %>
-  address_line_2: <%= "Suire #{n}" %>
+  address_line_2: <%= "Suite #{n}" %>
   city: Durham
   zip_code: 27701
   password_digest: <%= User.digest('password') %>

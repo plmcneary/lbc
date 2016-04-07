@@ -11,6 +11,7 @@ class CreateUsers < ActiveRecord::Migration
       t.integer :zip_code
       t.string :password_digest
       t.string :remember_digest
+      t.boolean :admin, default: false
 
       t.timestamps null: false
     end

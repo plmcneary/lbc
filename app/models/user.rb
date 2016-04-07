@@ -8,7 +8,7 @@ class User < ActiveRecord::Base
 
 #Organization
 
-  validates :organization, length: { maximum: 100 }, uniqueness: { case_sensitive: false }
+  validates :organization, length: { maximum: 100 }, uniqueness: { case_sensitive: false }, allow_nil: true
 
 # Address
 
