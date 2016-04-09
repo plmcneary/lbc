@@ -8,6 +8,8 @@ peter:
   zip_code: 27514
   password_digest: <%= User.digest('password') %>
   admin: true
+  activated: true
+  activated_at: <%= Time.zone.now %>
 
 megan:
   first_name: Megan
@@ -18,6 +20,8 @@ megan:
   city: Chapel Hill
   zip_code: 27516
   password_digest: <%= User.digest('password') %>
+  activated: true
+  activated_at: <%= Time.zone.now %>
 
 <% 30.times do |n| %>
 user_<%= n %>:
@@ -30,4 +34,6 @@ user_<%= n %>:
   city: Durham
   zip_code: 27701
   password_digest: <%= User.digest('password') %>
+  activated: true
+  activated_at: <%= Time.zone.now %>
 <% end %>
