@@ -23,7 +23,18 @@ megan:
   activated: true
   activated_at: <%= Time.zone.now %>
 
-<% 30.times do |n| %>
+jason:
+  first_name: Jason
+  last_name: Ellis
+  email: jason@example.com
+  organization: Fifth Season Gardening
+  address_line_1: 106 South Greensboro Street
+  city: Carrboro
+  zip_code: 27510
+  password_digest: <%= User.digest('password') %>
+  activated: false
+
+<% 15.times do |n| %>
 user_<%= n %>:
   first_name:  <%= "User #{n} first" %>
   last_name: <=% "User #{n} last" %>
@@ -36,4 +47,18 @@ user_<%= n %>:
   password_digest: <%= User.digest('password') %>
   activated: true
   activated_at: <%= Time.zone.now %>
+<% end %>
+
+<% 15.times do |n| %>
+user_<%= n+15 %>:
+  first_name:  <%= "User #{n+15} first" %>
+  last_name: <=% "User #{n+15} last" %>
+  email: <%= "user-#{n+15}@example.com" %>
+  organization: <%= "User #{n+15} organization" %>
+  address_line_1: <%= "#{n+15} Example Road" %>
+  address_line_2: <%= "Suite #{n+15}" %>
+  city: Durham
+  zip_code: 27701
+  password_digest: <%= User.digest('password') %>
+  activated: false
 <% end %>
