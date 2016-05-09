@@ -1,2 +1,5 @@
-<h1>Home</h1>
-<%= link_to "Sign up now!", signup_path, class: "btn" %>
+<% if logged_in? %>
+  <%= render 'static_pages/dashboard' %>
+<% else %>
+  <%= render 'static_pages/home_logged_out' %>
+<% end %>
